@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="has-navbar-fixed-top">
   <head>
     <title>BulmaStack</title>
     <%= csrf_meta_tags %>
@@ -9,8 +9,13 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body data-controller="main">
     <%= render 'layouts/navbar' %>
-    <%= yield %>
+    <section class="section">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </section>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
