@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :description, :class => "label" %>
-    <%= form.text_area :description, :class => "input", :placeholder => "Great description" %>
+    <%= form.text_area :description, :class => "input", :placeholder => "Great description", style: 'height: 40vh;' %>
   </div>
 
   <div class="field is-grouped is-grouped-centered">
@@ -27,8 +27,8 @@
       <%= form.text_field :movie_length, :class => "input", :placeholder => "1h26 for example" %>
     </div>
     <div class="field">
-      <%= form.label :director, :class => "label"  %>
-      <%= form.text_field :director, :class => "input", :placeholder => "Great director" %>
+      <%= form.label :release_date, :class => "label"  %>
+      <%= form.text_field :release_date, :class => "input", :placeholder => "Great release date" %>
     </div>
     <div class="field">
       <%= form.label :rating, :class => "label"  %>
