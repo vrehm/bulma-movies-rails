@@ -1,0 +1,47 @@
+<%= form_with(model: movie, local: true) do |form| %>
+  <% if movie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
+
+      <ul>
+      <% movie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title, :class => "label" %>
+    <%= form.text_field :title, :class => "input", :placeholder => "Great title" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description, :class => "label" %>
+    <%= form.text_area :description, :class => "input", :placeholder => "Great description" %>
+  </div>
+
+  <div class="field is-grouped is-grouped-centered">
+    <div class="field">
+      <%= form.label :movie_length, :class => "label"  %>
+      <%= form.text_field :movie_length, :class => "input", :placeholder => "1h26 for example" %>
+    </div>
+    <div class="field">
+      <%= form.label :director, :class => "label"  %>
+      <%= form.text_field :director, :class => "input", :placeholder => "Great director" %>
+    </div>
+    <div class="field">
+      <%= form.label :rating, :class => "label"  %>
+      <%= form.text_field :rating, :class => "input", :placeholder => "How many stars?" %>
+    </div>
+  </div>
+
+  <div class="field is-grouped is-grouped-centered">
+    <p class="control actions">
+        <%= form.submit :class => 'button is-primary' %>
+    </p>
+    <p class="control">
+      <%= link_to 'Cancel', movies_path, :class => "button is-light" %>
+    </p>
+  </div>
+<% end %>

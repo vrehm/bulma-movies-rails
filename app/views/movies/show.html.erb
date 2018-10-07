@@ -1,0 +1,24 @@
+<div class="columns is-mobile is-centered">
+  <div class="column is-half">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title"><%= @movie.title.titleize %></p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <%= @movie.description %>
+        </div>
+      </div>
+      <footer class="tags card-footer is-centered" style="padding-top: 0.5em">
+        <span class="tag is-rounded is-info is-large"><%= @movie.director %></span>
+        <span class="tag is-rounded is-info is-large"><%= @movie.movie_length %></span>
+        <span class="tag is-rounded is-info is-large"><%= @movie.rating %></span>
+      </footer>
+    </div>
+  </div>
+</div>
+<div class="columns is-mobile is-centered">
+  <div class="is-half" style="padding-top: 0.5em">
+    <%= link_to 'All movies', movies_path, :class => "button is-light" %>
+  </div>
+</div>
