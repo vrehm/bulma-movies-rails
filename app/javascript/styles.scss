@@ -1,4 +1,13 @@
 $primary: hsl(171, 100%, 41%);
 $pagination-current-border-color: $primary !default;
 $pagination-current-background-color: $primary !default;
+
+.table__wrapper {
+  overflow-x: auto;
+}
+
+.movies-table {
+  width: 100%;
+}
+
 @import '~bulma/bulma';
