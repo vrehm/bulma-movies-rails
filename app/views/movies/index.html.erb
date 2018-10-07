@@ -18,6 +18,15 @@
   </div>
 </div>
 
+<div class="columns is-mobile is-centered">
+  <div class="column is-half">
+    <h6 class="title has-text-centered">50 movies from <%= @movies_count %> total</h6>
+  </div>
+</div>
+
+<%= paginate @movies %>
+<br>
+
 <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
   <thead>
     <tr>

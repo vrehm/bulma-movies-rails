@@ -4,9 +4,9 @@ class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.json
   def index
-    number_pages = Movie.all.page(1).total_pages
-    @random_page = rand(1..number_pages)
-    @movies = Movie.page(@random_page)
+    @movies_count = Movie.count
+    @random_page = params[:page] || 1
+    @movies = Movie.order(:id).page @random_page
   end
 
   # GET /movies/1
